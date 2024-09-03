@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+            background-image: src= "{{url_for('static', filename='background.jpg')}}";
+            background-size:cover; /* Adjust as needed */
+            background-repeat: no-repeat; /* Optional, depending on your preference */
+            margin: 0; /* Remove default margin for full coverage */
+        }
+
+
+  html {
+    overflow-x: hidden;
+      }
+  
+  .navbar-brand {
+    font-size: 25px;
+  }
+  
+  .navbar-nav {
+    padding: 0px 20px 0px 405px;
+    font-size: 22px;
+  }
+  
+  .nav-item {
+    padding: 0px 10px
+  }
+  
+  .nav-item a:hover {
+    background-color: rgb(188, 171, 145);
+    border-radius: 12px;
+    color: black;
+  }
+  
+  .nav-item {
+    padding: 0px 10px;
+  }
+  
+  #first {
+    height: 200px;
+    width: 370px;
+  }
+  
+  .welcome {
+    font-size: 26px;
+    margin: 15px;
+    text-align: center;
+    font-family: emoji;
+  }
+  
+  .picture {
+  text-align:center;
+  }
+  
+  .word {
+    text-align: center;
+    font-size: 26px;
+  }
+  
+  .charachteristics {
+    margin: 15px 15px;
+    text-align: center;
+  }
+  
+  .row-1, .row-2, .row-3, .row-4, .row-5 {
+    padding: 10px 30px;
+  }
+  
+  .button {
+    padding: 20px 30px;
+  }
+  
+  #WebDev, #guardian, #famsup, #paid, #activity, #internet, #medu, #study-time, #failure, #Go-out, #Health, #Absences, #G1, #G2 {
+    margin: 0px 20px 0px 20px;
+  }
+  
+  #submit-btn {
+    padding: 0px 20px;
+    margin: 0px 10px;
+  }
+  
+  #reset-btn {
+    padding: 0px 20px;
+    margin: 0px 10px;
+  }
+  
+  #first, #second, #third {
+    border: 8px solid darkkhaki;
+    border-radius: 25px;
+  }
+  
+  #Activity {
+    width: 86px;
+  }
+  
+  .container {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  .about {
+    /* background-color: rgb(201, 126, 14); */
+    text-align: center;
+    /* margin: 10px 40px 10px 40px; */
+    /* padding: 10px 40px 10px 40px; */
+  
+  }
+  
+  .about-content {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .about-title {
+    font-size: 26px;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #fcdec5;
+    background-image: url(background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 24.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* margin: 40px; */
+    width: 270px;
+  }
+  
+  
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+  
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after,
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .row{
+  margin-left: 60px;
+  }
+  
+  .contact-us {
+    margin-top: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-family: emoji;
+  }
+  
+  .container {
+    font-size: 20px;
+    font-size: 13px;
+  }
+  
+  .name-title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  #picture{
+  text-align:center;
+   height: 200px;
+    width: 350px;
+  } 
+  </style>
+  <title>Prediction of Students performance</title>
+</head>
+
+<body id=main background = "background.jpg">
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('index') }}"> <b> STUDENT CAREER PREDICTION </b> </a>
+  
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- title -->
+    <div class="welcome"> <b> Welcome to Career Path Prediction  </b> </div>
+    <!-- /title -->
+    <!-- 3-Images -->
+    <div class="picture" >
+      <img src="\templates\career.jpg" alt="" id="first">
+    </div>
+    <!-- /3-Images -->
+    <br>
+    <div class="word"> <b> Take the quiz and find the right career for you! </b> </div>
+  
+    <!-- form -->
+    <form class="charachteristics" action="{{ url_for('predict') }}" method="post">
+      <div class="row-1">
+        <!-- <label for="Gender">Gender : </label> -->
+        <!-- <input type="Gender" name="Gender" id="Gender" placeholder="Gender"> -->
+        <b>
+        <label for="CGPA"> Enter your CGPA </label> <br> </br>
+        <input type="number" name="CGPA" id="CGPA">
+<!--
+        <input list="options" name="WebDev" placeholder="WebDev" id="WebDev" required>
+        <datalist id="options" >
+          <option value="Yes"> Yes </option>
+          <option value="No"> No </option>
+        </datalist>
+      -->
+        <br> </br> 
+        <h6> Have you done any Web development? </h6>
+        <input type="radio" name="WebDev" id="WebDev">
+        <label for="WebDev"> Yes </label>
+        <input type="radio" name="WebDev" id="WebDev">
+        <label for="WebDev"> No </label>
+        
+        <br> </br> 
+        <h6> Have you done Data Analysis? </h6>
+        <input type="radio" name="DataAnalysis" id="DataAnalysis">
+        <label for="DataAnalysis"> Yes </label>
+        <input type="radio" name="DataAnalysis" id="DataAnalysis">
+        <label for="DataAnalysis"> No </label>
+        
+        <br> </br> 
+        <h6> Do you have good reading and writing? </h6>
+        <input type="radio" name="ReadWrite" id="ReadWrite">
+        <label for="ReadWrite"> Yes </label>
+        <input type="radio" name="ReadWrite" id="ReadWrite">
+        <label for="ReadWrite"> No </label>
+
+        <br> </br> 
+        <h6> Are you a Tech person? </h6>
+        <input type="radio" name="TechPerson" id="TechPerson">
+        <label for="TechPerson"> Yes </label>
+        <input type="radio" name="TechPerson" id="TechPerson">
+        <label for="TechPerson"> No </label>
+
+        <br> </br> 
+        <h6> Are you a part of any Non-tech society? </h6>
+        <input type="radio" name="NonTechSociety" id="NonTechSociety">
+        <label for="NonTechSociety"> Yes </label>
+        <input type="radio" name="NonTechSociety" id="NonTechSociety">
+        <label for="NonTechSociety"> No </label>
+
+        <br> </br> 
+        <h6> Are you good at Coding? </h6>
+        <input type="radio" name="Coding" id="Coding">
+        <label for="Coding"> Yes </label>
+        <input type="radio" name="Coding" id="Coding">
+        <label for="Coding"> No </label>
+
+        <br> </br> 
+        <h6> Did you develop any Mobile apps? </h6>
+        <input type="radio" name="MobileApps" id="MobileApps">
+        <label for="MobileApps"> Yes </label>
+        <input type="radio" name="MobileApps" id="MobileApps">
+        <label for="MobileApps"> No </label>
+
+
+        <br> </br> 
+        <h6> Are you good at communication? </h6>
+        <input type="radio" name="Communication" id="Communication">
+        <label for="Communication"> Yes </label>
+        <input type="radio" name="Communication" id="Communication">
+        <label for="Communication"> No </label>
+
+        <br> </br> 
+        <h6> Have you done any courses on Security? </h6>
+        <input type="radio" name="Security" id="Security">
+        <label for="Security"> Yes </label>
+        <input type="radio" name="Security" id="Security">
+        <label for="Security"> No </label>
+
+        <br> </br> 
+        <h6> Have you worked with Large Databases? </h6>
+        <input type="radio" name="LargeDB" id="LargeDB">
+        <label for="LargeDB"> Yes </label>
+        <input type="radio" name="LargeDB" id="LargeDB">
+        <label for="LargeDB"> No </label>
+
+        <br> </br> 
+        <h6> Do you have knowlege of statistics and data science? </h6>
+        <input type="radio" name="Stats" id="Stats">
+        <label for="Stats"> Yes </label>
+        <input type="radio" name="Stats" id="Stats">
+        <label for="Stats"> No </label>
+
+        <br> </br> 
+        <h6> Are you proficient in English? </h6>
+        <input type="radio" name="English" id="English">
+        <label for="English"> Yes </label>
+        <input type="radio" name="English" id="English">
+        <label for="English"> No </label>
+
+        <br> </br> 
+        <h6> Have you ever managed some event? </h6>
+        <input type="radio" name="Event" id="Event">
+        <label for="Event"> Yes </label>
+        <input type="radio" name="Event" id="Event">
+        <label for="Event"> No </label>
+
+        <br> </br> 
+        <h6> Do you write technical blogs? </h6>
+        <input type="radio" name="TechBlogs" id="TechBlogs">
+        <label for="TechBlogs"> Yes </label>
+        <input type="radio" name="TechBlogs" id="TechBlogs">
+        <label for="TechBlogs"> No </label>
+
+        <br> </br> 
+        <h6> Are you into marketing? </h6>
+        <input type="radio" name="Marketing" id="Marketing">
+        <label for="Marketing"> Yes </label>
+        <input type="radio" name="Marketing" id="Marketing">
+        <label for="Marketing"> No </label>
+
+        <br> </br> 
+        <h6> Are you a ML expert? </h6>
+        <input type="radio" name="ML" id="ML">
+        <label for="ML"> Yes </label>
+        <input type="radio" name="ML" id="ML">
+        <label for="ML"> No </label>
+
+        <br> </br> 
+        <h6> Do you have a lot of connections? </h6>
+        <input type="radio" name="Connections" id="Connections">
+        <label for="Connections"> Yes </label>
+        <input type="radio" name="Connections" id="Connections">
+        <label for="Connections"> No </label>
+
+        <br> </br> 
+        <h6> Have you ever built live project? </h6>
+        <input type="radio" name="LiveProject" id="LiveProject">
+        <label for="LiveProject"> Yes </label>
+        <input type="radio" name="LiveProject" id="LiveProject">
+        <label for="LiveProject"> No </label>
+      </div>
+    </b>
+
+      <div class="col-12 button">
+        <button type="submit" class="btn btn-success" id="submit-btn">Submit </button>
+        <button type="reset" class="btn btn-danger" id="reset-btn">Reset</button>
+        <!-- <input type="reset" value="Reset" id="reset-btn"> -->
+      </div>
+    </form>
+    <!-- /form -->
+
+  <!-- Contact -->
+  <h2 class="contact-us" id="Contact" style="text-align:center">CONTACT US</h2><br><br>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="static/images/profile.jpg" alt="JKS" style="width:100%" height="150px">
+        <div class="container">
+          <h2 class="name-title"> J Keerthi Sarayu </h2>
+          <p class="title"> Project Backend </p>
+          <p>Mobile: 7013767242 </p>
+          <p>Email: jalasutramkeerthisarayu@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="static/images/sk.jpeg" alt="Nikhil" style="width:100%" height="150px">
+        <div class="container">
+          <h2 class="name-title"> Nikhil </h2>
+          <p class="title">Project Frontend </p>
+          <p>Mobile: xxx </p>
+          <p>Email: xxx@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="static/images/pj.jpeg" alt="Vinutna" style="width:100%" height="150px">
+        <div class="container">
+          <h2 class="name-title"> Vinuthna </h2>
+          <p class="title"> Project Frontend </p>
+          <p>Mobile: xxx </p>
+          <p>Email: xxx@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Contact -->
+
+  <br><br>
+    <!-- Copyright -->
+    <footer class="bg-dark text-center text-white">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright: All Rights Reserved
+        <!-- <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a> -->
+      </div>
+    </footer>
+    <!-- /Copyright -->
+  
+    <script>
+      var preloader = document.getElementById("loading");
+  
+      function myFunction() {
+        preloader.style.display = 'none';
+      }
+  
+    </script>
+  
+    <script>
+      //Get the button:
+      mybutton = document.getElementById("myBtn");
+  
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () { scrollFunction() };
+  
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+  
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
+  
+  
+  </body>
+  
+  </html>
